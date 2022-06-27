@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+site_name: Khue's Homelab
+copyright: Copyright &copy; 2020 - 2022 Khue Doan
+
+repo_url: https://github.com/khuedoan/homelab
+
+theme:
+  name: material
+  palette:
+    primary: black
+  features:
+    - navigation.indexes
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - search.highlight
+    - search.share
+
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.snippets:
+      check_paths: true
+  - def_list
+  - pymdownx.tasklist:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Home:
+    - index.md
+    - get-started.md
+    - license.md
+  - Operations:
+    - Deployment:
+      - Development environment:
+        - operations/deployment/development/install.md
+        - operations/deployment/development/cleanup.md
+      - Production environment:
+        - operations/deployment/production/prerequisites.md
+        - operations/deployment/production/external-resources.md
+        - operations/deployment/production/configuration.md
+        - operations/deployment/production/deployment.md
+        - operations/deployment/production/post-installation.md
+    - Tutorials:
+      - operations/tutorials/manual-dns-setup.md
+      - operations/tutorials/expose-services-to-the-internet.md
+      - operations/tutorials/use-both-github-and-gitea.md
+      - operations/tutorials/add-or-remove-nodes.md
+      - operations/tutorials/run-commands-on-multiple-nodes.md
+      - operations/tutorials/single-node-cluster-adjustments.md
+    - Runbooks:
+      - operations/runbooks/argocd.md
+      - operations/runbooks/cert-manager.md
+      - operations/runbooks/gitea.md
+      - operations/runbooks/longhorn.md
+      - operations/runbooks/vault.md
+    - operations/troubleshooting.md
+  - Development:
+    - development/index.md
+  - User guide:
+    - user-guide/onboarding.md
+  - Reference:
+    - reference/architecture.md
+    - reference/changelog.md
+    - reference/roadmap.md
+    - reference/contributors.md
+    - reference/contributing.md
+    - reference/faq.md
