@@ -1,2 +1,2 @@
 gitops:
-  repo: https://github.com/khuedoan/homelab
+  repo: git@github.com:bengartner/homelab.git
